@@ -1,0 +1,25 @@
+1. select movie_id, movie_title, movie_rel_year, movie_genres, dir_name from movie inner join director on movie.dir_id = director.dir_id;
+
+2. select movie_id, movie_title, movie_rel_year, movie_genres from movie inner join director on movie.dir_id = director.dir_id where movie.movie_rel_year = '2001' and director.dir_name = 'piyush';
+
+3. select DISTINCT(review_name) from reviewers;
+
+4. select movie_title from movie where movie_title like '__e%';
+
+5. select distinct(dir_name) from director d, movie m where d.dir_id not in (select dir_id from movie);
+
+6. select movie_rel_year,count(*) from movie group by (movie_rel_year);
+
+7. select movie_title, review_star from movie m inner join movierating r on m.movie_id = r.movie_id;
+
+8. select avg(r.review_star) from movie m inner join movierating r on m.movie_id = r.movie_id;
+
+9. alter table movierating add review varchar(50);
+
+10. select m.movie_title from movie m inner join movierating r on m.movie_id = r.movie_id where r.review is not null;
+
+11. create INDEX idx_title ON movie(movie_title,movie_rel_year);
+
+12. select m.movie_title, r.revenue_amount from movie m inner join movierevenue r on m.movie_id = r.movie_id where movie_rel_year = '2001' order by(r.revenue_amount) desc limit 1;
+
+13. SELECT movie_genres,sum(revenue_amount) from movie m,movierevenue mr where m.movie_id=mr.movie_id group by (m.movie_genres);

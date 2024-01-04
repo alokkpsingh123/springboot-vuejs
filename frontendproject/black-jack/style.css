@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    background-color: grey;
+}
+
+.container {
+    background-color: white;
+    margin: 200px 200px;
+    border-radius: 4px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+h1 {
+    color: royalblue;
+}
+
+button {
+    margin-right: 30px;
+    width: 150px;
+    height: 30px;
+    padding: 3px 3px;
+    background-color: #89CFF0;
+    border-radius: 30px;
+    color: white;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alok's portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <span>Portfolio</span>
+        </div>
+        <div class="nav-right">
+            <a href="#home-section">Home</a>
+            <a href="#about-section">About</a>
+            <a href="#skills-section">Skills</a>
+            <a href="#project-section">Project</a>
+            <a href="#contact-section">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container-main">
+
+        <div class="container" id="home-section">
+
+            <div class="container-header">
+                <div class="header-title">
+                    <h3>Hello </h3>
+                    <h1>I'm Alok Singh <br> A Software Engineer</h1>
+                    <h2>From banglore</h2>
+                </div>
+                <div class="header-content">
+                    <p class="header-about">proactive learner and a budding software engineer with a strong foundation.
+                    </p>
+                </div>
+            </div>
+            <div class="container-image">
+                <img src="/resourse/profile-image.png" alt="profile-image" height="400px" width="400px" />
+            </div>
+
+        </div>
+        <hr>
+        <div class="container-about" id="about-section">
+            <h2 >About</h2>
+            <p>Passionate and dedicated software engineer with a flair for creating visually appealing and intuitive web
+                experiences. My journey in the world of web development is driven by a constant curiosity to explore new
+                technologies and a commitment to delivering solutions that make a positive impact.</p>
+        </div>
+        <hr>
+        <div class="container-skills" id="skills-section">
+            <h2 >Skills</h2>
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <ul class="skill-list">
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Database</h3>
+                <ul class="skill-list">
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                    <li>SQLite</li>
+                    <li>Spring Jdbc</li>
+                    <li>Room</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <ul class="skill-list">
+                    <li>Android Studio</li>
+                    <li>Jetpack Compose</li>
+                    <li>Flow</li>
+                    <li>Spring boot</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Familiar</h3>
+                <ul class="skill-list">
+                    <li>React</li>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Core Subjects</h3>
+                <ul class="skill-list">
+                    <li>DBMS</li>
+                    <li>Operating System</li>
+                    <li>Computer Network</li>
+                    <li>OOPs</li>
+                    <li>DS & Algo</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        <div class="container-project" id="project-section">
+            <h2 >Project</h2>
+            <div class="container-sub-project">
+                <div class="container-sub-project-content">
+                    <h3>NOTES APP</h3>
+                    <p>This application, powered by Retrofit, MongoDB, Express.js, Fragments, Data Binding, and
+                        Dagger-Hilt, serves as a centralized hub for users to efficiently organize their thoughts and important information.
+                        Through the development process, a secure API was implemented to enable easy sign-up, sign-in, and authentication,
+                        coupled with seamless note storage using MongoDB.
+                    </p>
+                    <img src="/resourse/notes-app-image.webp" alt="notes-app-image" width="400px" height="400px">
+
+                </div>
+                <div class="container-sub-project-content">
+                    <h3>CONNECT BY POST APP</h3>
+                    <p>TThis application, developed with Kotlin, Firestore Database, Google Auth, and XML, enables users
+                        to share concise messages on various topics. The user experience is enhanced with a secure authentication
+                        system using Google Auth and Firebase. The app boasts a responsive and efficient UI, thanks to the
+                        utilization of Android Jetpack components.
+                    </p>
+                    <img src="/resourse/social-media-app-image.png" alt="connect-by-post-app-image" width="400px"
+                        height="400px">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="container-contact" id="contact-section">
+            <h2 >Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

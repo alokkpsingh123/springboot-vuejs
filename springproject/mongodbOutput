@@ -1,0 +1,76 @@
+db.movie.insertMany([{
+	"_id": 1,
+	"movie_title": "wavelength",
+	"movie_rel_year": 2001,
+	"movie_genres" : "drama",
+	"director" : {
+	    "dir_name": "alok"
+	},
+	"reviewer" : {
+		"reviewer_id": 1,
+		"reviewer_name" : "ruchi"
+	},
+	"reviewer_star" : 3 ,
+	"revenue_amount": 100
+},
+{
+	"_id": 2,
+	"movie_title": "dream work",
+	"movie_rel_year": 2005,
+	"movie_genres" : "action",
+	"director" : {
+	    "dir_name": "shivam"
+	},
+	"reviewer" : {
+		"reviewer_id": 1,
+		"reviewer_name" : "ruchi"
+	},
+	"reviewer_star" : 2 ,
+	"revenue_amount": 110
+},
+{
+	"_id": 3,
+	"movie_title": "epilogue",
+	"movie_rel_year": 2000,
+	"movie_genres" : "action",
+	"director" : {
+	    "dir_name": "amit"
+	},
+	"reviewer" : {
+		"_id": 2,
+		"reviewer_name" : "mahi"
+	},
+	"reviewer_star" : 5 ,
+	"revenue_amount": 120
+},
+{
+	"_id": 4,
+	"movie_title": "we",
+	"movie_rel_year": 2005,
+	"movie_genres" : "romance",
+	"director" : {
+	    "dir_name": "alok"
+	},
+	"reviewer" : {
+		"_id": 3,
+		"reviewer_name" : "kashish"
+	},
+	"reviewer_star" : 1 ,
+	"revenue_amount": 130
+}]);
+
+
+
+1. db.movie.find({}, { movie_title: 1, "director.dir_name": 1, _id: 0 }).pretty();
+2. db.movie.find({ movie_rel_year: 2005, "director.dir_name": "alok" }).pretty();
+3. db.movie.distinct("reviewer.reviewer_name");
+4. db.movie.find({ movie_title: { $regex: /^..a/ } }, { movie_title: 1, _id: 0 }).pretty();
+5. db.movie.distinct("director.dir_name", { director: { $exists: false } });
+6. db.movie.aggregate([{ $group: { _id: "$movie_rel_year", count: { $sum: 1 } } }]);
+7. db.movie.find({}, {movie_title: 1, reviewer_star: 1, _id: 0 }).pretty();
+8. db.movie.aggregate([{ $group: { _id: null, avg_rating: { $avg: "$reviewer_star" } } }]).pretty()
+9. db.movie.updateMany({}, { $set: { "review": "" } });
+10. db.movie.find({ "review": { $ne: "" } }, { movie_title: 1, reviewer_star: 1, _id: 0 });
+11. 
+12. db.movie.find({ movie_rel_year: 2005 }).sort({ revenue_amount: -1 }).limit(1);
+13. db.movie.aggregate([{ $match: { movie_rel_year: 2005 } }, { $group: { _id: "$movie_genres", total_revenue: { $sum: "$revenue_amount" } } }]);

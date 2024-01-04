@@ -1,0 +1,60 @@
+p{
+    color: red;
+}
+
+.label{
+    color: green;
+}
+
+#paragraph {
+    color: aquamarine;
+}
+
+a:link{
+    color: green;
+}
+
+a:visited{
+    color: red;
+}
+
+a:hover{
+    color: blue;
+}
+
+.demo-padding{
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px 200px;
+    
+}
+
+.p1{
+    text-align: center;
+    color: green;
+}
+
+.p2{
+    text-decoration: underline;
+    color: lightblue;
+}
+
+.p3{
+    text-transform: capitalize;
+    color: brown;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: grey;
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+    body{
+        background-color: blue;
+        width: 100%;
+    }
+}
